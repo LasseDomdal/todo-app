@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "krizYn0IHAKhZG9rYm7qMZgOhJTGJF7WwXbW8hl0yg0=",
+  "Source": "ToDoAppBackend",
+  "BasePath": "_content/ToDoAppBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
