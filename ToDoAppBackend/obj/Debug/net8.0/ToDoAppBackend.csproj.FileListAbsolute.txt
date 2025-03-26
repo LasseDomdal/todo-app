@@ -166,3 +166,4 @@ D:\Code_projects\Fullstack_Todo_app\ToDoAppBackend\obj\Debug\net8.0\refint\ToDoA
 D:\Code_projects\Fullstack_Todo_app\ToDoAppBackend\obj\Debug\net8.0\ToDoAppBackend.pdb
 D:\Code_projects\Fullstack_Todo_app\ToDoAppBackend\obj\Debug\net8.0\ToDoAppBackend.genruntimeconfig.cache
 D:\Code_projects\Fullstack_Todo_app\ToDoAppBackend\obj\Debug\net8.0\ref\ToDoAppBackend.dll
+D:\Code_projects\Fullstack_Todo_app\ToDoAppBackend\obj\Debug\net8.0\ToDoAppBackend.sourcelink.json

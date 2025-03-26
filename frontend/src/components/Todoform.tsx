@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { createTodo, updateTodo } from "../services/TodoService";
 import { Todo } from "../types/Todo";
+import { MoodEmoji } from "../types/Emoji";
 
 interface Props {
   existingTodo?: Todo;
@@ -10,8 +11,17 @@ interface Props {
 const ToDoForm: React.FC<Props> = ({ existingTodo, onSave }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [mood, setMood] = useState(1);
+  const [mood, setMood] = useState(2);
   const [dueDate, setDueDate] = useState("");
+
+  const moodOptions = [
+    { value: 1, label: `${MoodEmoji(1)} Glad` },
+    { value: 2, label: `${MoodEmoji(2)} Neutral` },
+    { value: 3, label: `${MoodEmoji(3)} Trist` },
+    { value: 4, label: `${MoodEmoji(4)} Spændt` },
+    { value: 5, label: `${MoodEmoji(5)} Træt` },
+  ];
+
 
   useEffect(() => {
     if (existingTodo) {
@@ -56,16 +66,21 @@ const ToDoForm: React.FC<Props> = ({ existingTodo, onSave }) => {
           onChange={(e) => setDescription(e.target.value)}
           className="w-full p-2 border border-gray-300 rounded"
         />
-        <input
-          type="number"
-          placeholder="Humør (1-5)"
+        <select
           value={mood}
           onChange={(e) => setMood(Number(e.target.value))}
           className="w-full p-2 border border-gray-300 rounded"
-          min="1"
-          max="5"
           required
-        />
+        >
+          <option value="" disabled>
+            Choose mood
+          </option>
+          {moodOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
         <input
           type="date"
           value={dueDate}
