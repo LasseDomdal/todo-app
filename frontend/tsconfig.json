@@ -8,7 +8,11 @@
   ,"compilerOptions": {
     "noImplicitAny": true,
     "strict": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   }
 }
 
